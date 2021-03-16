@@ -20,4 +20,13 @@
 
 > :Collapse label=Members
 > 
-> [NN](/docs/members/nn)
+> [Daniel Cifuentes](/docs/members/nn)
+
+> :Collapse label=Homeworks
+>
+> [Filters](/docs/filters/image)
+
+> :Collapse label=Experiments
+>
+> [Optical Ilussion](/docs/experiments/OpticalIllusion)
+
