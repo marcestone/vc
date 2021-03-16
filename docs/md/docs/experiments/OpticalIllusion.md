@@ -12,4 +12,4 @@ Sources:
 
 2 - https://www.researchgate.net/figure/The-Kanizsa-triangle-is-an-example-for-modal-completion-Illusory-contours-forming-a_fig1_11359675
 
-> :P5 sketch=/docs/sketches/gray_scale.js, width=512, height=512
+> :P5 sketch=/docs/sketches/opticalIllusion.js, width=400, height=400
