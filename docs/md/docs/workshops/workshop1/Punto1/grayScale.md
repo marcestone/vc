@@ -1,6 +1,6 @@
 # Problema:
 
-Introducir el análisis de imágenes/video al implementar: Conversión a escala de grises: promedio rgb y luma.
+Introducir el análisis de imágenes/video al implementar: Conversión a escala de grises: promedio rgb y lumaaa.
 
 # Información
 
@@ -60,7 +60,7 @@ function ImageLoaded(){
 ``` 
 Resultado:
 
-> :P5 sketch=/docs/sketches/workshops/workshop1/punto1/grayScale/imageRGBAverage.js, width=512, height=512
+> :P5 sketch=/docs/sketches/imageRGBAverage.js, width=512, height=512
 
 Código para un video:
 
@@ -98,7 +98,7 @@ function draw() {
 
 Resultado:
 
-> :P5 sketch=/docs/sketches/workshops/workshop1/punto1/grayScale/videoRGBAverage.js, width=320, height=240
+> :P5 sketch=/docs/sketches/videoRGBAverage.js, width=320, height=240
 
 ## Conversión a escala de grises: Luma
 
@@ -140,7 +140,7 @@ function ImageLoaded(){
 
 Resultado:
 
-> :P5 sketch=/docs/sketches/workshops/workshop1/punto1/grayScale/imageLUMA.js, width=512, height=512
+> :P5 sketch=/docs/sketches/imageLUMA.js, width=512, height=512
 
 Código para un video:
 
@@ -177,7 +177,7 @@ function draw() {
 
 Resultado:
 
-> :P5 sketch=/docs/sketches/workshops/workshop1/punto1/grayScale/videoLUMA.js, width=320, height=240
+> :P5 sketch=/docs/sketches/videoLUMA.js, width=320, height=240
 
 # Conclusiones
 
