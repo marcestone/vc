@@ -20,13 +20,13 @@
 
 > :Collapse label=Members
 > 
-> [Daniel Cifuentes](/docs/members/nn)
+> [Daniel Cifuentes](/docs/members/DanielCifuentes)
 
 > :Collapse label=Homeworks
 >
 > [Filters](/docs/filters/image)
 
-> :Collapse label=Experiments
+> :Collapse label=Deliveries
 >
-> [Optical Ilussion](/docs/experiments/OpticalIllusion)
+> [Workshop 1.1](/docs/workshops/workshop1/Punto1/grayScale)
 
