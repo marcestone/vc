@@ -18,8 +18,9 @@
 > [Libs](/docs/snippets/lib)
 > [Sound](/docs/snippets/sound)
 
-> :Collapse label=Members
+> :Collapse label=Team
 > 
+
 > [Daniel Cifuentes](/docs/members/DanielCifuentes)
 
 > :Collapse label=Homeworks
