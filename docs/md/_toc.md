@@ -30,4 +30,5 @@
 > :Collapse label=Deliveries
 >
 > [Workshop 1.1](/docs/workshops/workshop1/Punto1/grayScale)
+> [Workshop 1.4](/docs/workshops/workshop1/Punto4/mosaic)
 
