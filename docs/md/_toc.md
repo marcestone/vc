@@ -20,8 +20,8 @@
 
 > :Collapse label=Team
 > 
-
 > [Daniel Cifuentes](/docs/members/DanielCifuentes)
+> [Farid Cortés](/docs/members/FaridCortes)
 
 > :Collapse label=Homeworks
 >
