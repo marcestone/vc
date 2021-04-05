@@ -22,6 +22,8 @@
 > 
 > [Daniel Cifuentes](/docs/members/DanielCifuentes)
 > [Farid Cortés](/docs/members/FaridCortes)
+> [Juan Gomez](/docs/members/JuanGomez)
+
 
 > :Collapse label=Homeworks
 >
@@ -30,5 +32,6 @@
 > :Collapse label=Deliveries
 >
 > [Workshop 1.1](/docs/workshops/workshop1/Punto1/grayScale)
+> [Workshop 1.3](/docs/workshops/workshop1/Punto1/ascii)
 > [Workshop 1.4](/docs/workshops/workshop1/Punto4/mosaic)
 
