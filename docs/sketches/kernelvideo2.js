@@ -1,23 +1,38 @@
-
-function preload() {
-  img = loadImage('/vc/docs/sketches/lenna.png')
-}
+let vid;
 
 function setup() {
-  createCanvas(img.width, img.height);
-  pixelDensity(1);
+  createCanvas(320, 240);
+  vid = createVideo(['/vc/docs/sketches/fingers.mov', '/vc/docs/sketches/fingers.webm']);
+  vid.loop();
+  noStroke();
+  fill(0);
 }
 
 function draw() {
+  background(255);
+  fill(0);
+  noStroke();
 
-  var k1 = [[0, -1, 0],
-            [-1, 5, -1],
-            [0, -1, 0]];
 
+  
+  //image(vid, 0, 0); // Displays the image from point (0,0) 
+  vid.loadPixels();
+
+  edgeImg=edge(vid)
+
+  image(edgeImg, 0, 0, edgeImg.width, edgeImg.height);
+}
+
+
+  
+function edge(img) { 
+
+
+  var k1 = [[-1, -1, -1],
+            [-1, 8, -1],
+            [-1, -1, -1]];
   var pond = 1
 
-  //image(img, 0, 0); // Displays the image from point (0,0) 
-  img.loadPixels();
   // Create an opaque image of the same size as the original
   auxImg = createImage(img.width, img.height, RGB);
   auxImg.loadPixels();
@@ -52,7 +67,6 @@ function draw() {
 
       // For this pixel in the new image, set the gray value
       // based on the sum from the kernel
-      //auxImg.pixels[4*(y*img.width + x)] = color(sumR, sumG, sumB)
       auxImg.pixels[4*(y*img.width + x)] = sumR;
       auxImg.pixels[4*(y*img.width + x) + 1] = sumG;
       auxImg.pixels[4*(y*img.width + x) + 2] = sumB;
@@ -62,8 +76,7 @@ function draw() {
   }
   // State that there are changes to auxImg.pixels[]
   auxImg.updatePixels();
-  //img.updatePixels();
-  //image(auxImg, width/2, 0); // Draw the new image
-  image(auxImg, 0, 0, img.width, img.height);
-  noLoop(); // we want you to have control of the blur
+  return auxImg;
+
 }
+
