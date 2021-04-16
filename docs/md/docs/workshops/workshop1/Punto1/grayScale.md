@@ -179,9 +179,6 @@ Resultado:
 
 > :P5 sketch=/docs/sketches/videoLUMA.js, width=320, height=240
 
-# Conclusiones
-
-Las dos técnicas anteriores nos proveen un resultado que funciona muy bien para generar un equivalente en escala de grises de la imágen y el video. Además, es fácil de procesar en cuanto a costos computacionales necesarios para realizar las operaciones. 
 
 ## Fuentes
 

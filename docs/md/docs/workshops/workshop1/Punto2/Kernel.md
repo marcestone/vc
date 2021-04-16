@@ -276,9 +276,6 @@ Resultado:
 > :P5 sketch=/docs/sketches/kernelvideo2.js, width=320, height=512
 
 
-# Conclusiones
-
-Las máscaras de convolución son útiles para extractar información relevante de una imagen se utilizan para desenfoque, enfoque, realce, detección de bordes y más.
 
 ## Fuentes
 

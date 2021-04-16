@@ -188,13 +188,6 @@ Los tres parámetros en el modelo representan la luminosidad de color (L*, L*=0 
 > > }
 > > ``` 
 
-# Conclusiones
-
-* La producción de mosaicos es en general una tarea ardua, por ello hacerlo computacionalmente es muy importante.
-
-* Tomando una imagen con mayor resolución permitiría apreciar mejor las imágenes que conforman el mosaico, pero dado que se están haciendo los cálculos secuencialmente la operación es demasiado pesada para esta página.
-
-* Es importante a la hora de escoger las imágenes que mejor aproximan al color de la imagen original tener en cuenta la representación del color que se usa para hallar la distancia entre los colores promedio de las imágenes y el color deseado, en este caso se utilizó la representación CIELAB porque esta aproxima de mejor forma a la vista humana, lo que nos permite buscar de mejor manera colores aproximados.
 
 ## Fuentes
 

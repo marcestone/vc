@@ -26,15 +26,13 @@
 > [Camilo Rico](/docs/members/CamiloRico)
 
 
-
-> :Collapse label=Homeworks
->
-> [Filters](/docs/filters/image)
-
 > :Collapse label=Deliveries
->
-> [Workshop 1.1](/docs/workshops/workshop1/Punto1/grayScale)
-> [Workshop 1.2](/docs/workshops/workshop1/Punto2/Kernel)
-> [Workshop 1.3](/docs/workshops/workshop1/Punto1/ascii)
-> [Workshop 1.4](/docs/workshops/workshop1/Punto4/mosaic)
+> 
+> > :Collapse label=Workshop 1
+> >
+> > [Point 1](/docs/workshops/workshop1/Punto1/grayScale)
+> > [Point 2](/docs/workshops/workshop1/Punto2/Kernel)
+> > [Point 3](/docs/workshops/workshop1/Punto1/ascii)
+> > [Point 4](/docs/workshops/workshop1/Punto4/mosaic)
+> > [Conclusions](/docs/workshops/workshop1/conclusiones)
 
