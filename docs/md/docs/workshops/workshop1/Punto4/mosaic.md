@@ -16,6 +16,14 @@ Los tres parámetros en el modelo representan la luminosidad de color (L*, L*=0 
 
 # Solución
 
+## Proceso
+
+El proceso de creación del mosaico está dividido principalmente en 2 fases, la primera es una fase previa de creación del dataset de imágenes utilizadas en el mosaico y la segunda es el proceso como tal de reemplazo de los pixeles de la imagen por otras imágenes que aproximen el color de cada pixel.
+
+Para la primera parte se utilizó un script en Python para descargar imágenes aleatorias de una API publica llamada Pixabay en la cual se permite utilizar un filtro por el color de la imagen, el funcionamiento del script es simple, hace una serie de peticiones a la API (una por cada color) solicitando 20 imágenes del color deseado, luego toma las imágenes de vista previa (una imagen de menor resolución) y las almacena con el código hexadecimal del color dominante de las imágenes, en total se descargaron 277 imágenes.
+
+Una vez ya se tiene el dataset de imágenes listo, viene la segunda parte, en esta fase se lee la imagen que se desea transformar a mosaico y se le baja la resolución por cuestión de rendimiento, una vez tenga una resolución baja se reemplaza cada pixel de la imagen por la imagen del dataset con el color dominante más aproximado al color del pixel, para esto se utilizo la representación CIELAB del color, debido a que esta permite hallar correctamente la "distancia" entre 2 colores.
+
 ## Imagen original
 > :P5 sketch=/docs/sketches/simple_image.js, width=512, height=512
 
@@ -186,6 +194,53 @@ Los tres parámetros en el modelo representan la luminosidad de color (L*, L*=0 
 > > 
 > >   return [L,a,b];
 > > }
+> > ``` 
+>
+> > :Tab title=Código de preparación de imagenes:, icon=code
+> > ``` python
+> > import json
+> > import requests
+> > import shutil
+> > from time import sleep
+> > from colorthief import ColorThief
+> > from tqdm import tqdm
+> > from os import rename
+> > 
+> > 
+> > def to_hex(number):
+> >     res = ""
+> >     aux = hex(int(number))[2:]
+> >     return ("0" * (2-len(aux))) + aux
+> > 
+> > key = "YOUR API KEY"
+> > image_type = "photo"
+> > per_page = 20
+> > page = 1
+> > orientation = "horizontal"
+> > base_url = f'https://pixabay.com/api/?key={key}&image_type={image_type}&per_page={per_page}&page={page}&orientation={orientation}&> > colors='
+> > 
+> > colors = ["grayscale", "transparent", "red", "orange", "yellow", "green", "turquoise", "blue", "lilac", "pink", "white", "gray", > > "black", "brown" ]
+> > for color in colors:
+> >     URL = base_url + color
+> >     res = requests.get(URL)
+> >     res_data = json.loads(res.text)
+> >     for image in tqdm(res_data['hits']):
+> >         # save the image
+> >         url = image['previewURL']
+> >         name = './data/' + str(image['id']) + '.jpg'
+> >         r = requests.get(url, stream=True)
+> >         if r.status_code == 200:
+> >             with open(name, 'wb') as f:
+> >                 r.raw.decode_content = True
+> >                 shutil.copyfileobj(r.raw, f)  
+> > 
+> >         # Get the dominant color of the image
+> >         color_thief = ColorThief(name)
+> >         dominant_color = color_thief.get_color(quality=1)
+> >         dom = ""
+> >         for x in dominant_color:
+> >             dom += to_hex(x)
+> >         rename(name, './data/' + dom + '.jpg')
 > > ``` 
 
 
