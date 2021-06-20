@@ -20,14 +20,19 @@
 
 > :Collapse label=Team
 > 
-
 > [Daniel Cifuentes](/docs/members/DanielCifuentes)
+> [Farid Cortés](/docs/members/FaridCortes)
+> [Juan Gomez](/docs/members/JuanGomez)
+> [Camilo Rico](/docs/members/CamiloRico)
 
-> :Collapse label=Homeworks
->
-> [Filters](/docs/filters/image)
 
 > :Collapse label=Deliveries
->
-> [Workshop 1.1](/docs/workshops/workshop1/Punto1/grayScale)
+> 
+> > :Collapse label=Workshop 1
+> >
+> > [Point 1](/docs/workshops/workshop1/Punto1/grayScale)
+> > [Point 2](/docs/workshops/workshop1/Punto2/Kernel)
+> > [Point 3](/docs/workshops/workshop1/Punto1/ascii)
+> > [Point 4](/docs/workshops/workshop1/Punto4/mosaic)
+> > [Conclusions](/docs/workshops/workshop1/conclusiones)
 

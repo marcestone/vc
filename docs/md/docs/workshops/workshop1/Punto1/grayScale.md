@@ -1,17 +1,3 @@
-<!-- # Image Loading and Filters
-This is an excercise of applying different filters to an image.
-
-## Original Image
-> :P5 sketch=/docs/sketches/simple_image.js, width=512, height=512
-
-## Gray Scale Filter
-
-> :P5 sketch=/docs/sketches/gray_scale.js, width=512, height=512
-
-## Negative Filter
-
-> :P5 sketch=/docs/sketches/negative.js, width=512, height=512 -->
-
 # Problema:
 
 Introducir el análisis de imágenes/video al implementar: Conversión a escala de grises: promedio rgb y lumaaa.
@@ -193,9 +179,6 @@ Resultado:
 
 > :P5 sketch=/docs/sketches/videoLUMA.js, width=320, height=240
 
-# Conclusiones
-
-Las dos técnicas anteriores nos proveen un resultado que funciona muy bien para generar un equivalente en escala de grises de la imágen y el video. Además, es fácil de procesar en cuanto a costos computacionales necesarios para realizar las operaciones. 
 
 ## Fuentes
 
