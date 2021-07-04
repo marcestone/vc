@@ -58,9 +58,10 @@ function ImageLoaded(){
   img.updatePixels()
 }
 ``` 
-Resultado:
+Resultado: 
 
 > :P5 sketch=/docs/sketches/imageRGBAverage.js, width=512, height=512
+ 
 
 Código para un video:
 
