@@ -39,3 +39,4 @@
 > > :Collapse label=Workshop 2
 > >
 > > [Point 1](/docs/workshops/workshop2/Punto1/grayScaleHardware)
+> > [Conclusions](/docs/workshops/workshop2/conclusiones)

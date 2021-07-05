@@ -9,7 +9,7 @@ varying vec4 vVertexColor;
 
 void main() {
   
-  vec4 tex = texture2D(texture, vTexCoord);
+  vec4 tex = texture2D(texture, 1.0 - vTexCoord);
 
   float RGBAverage = (tex.r + tex.g + tex.b) * 0.333;
 

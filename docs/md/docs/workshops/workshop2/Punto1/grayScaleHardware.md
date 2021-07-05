@@ -26,50 +26,25 @@ Para generar la imagen equivalente en escala de grises, se operan los valores RG
 Código shader:
 
 ``` javascript
-// Precision seems mandatory in webgl
 precision highp float;
 
-// 1. Attributes and uniforms sent by p5.js
-
-// Vertex attributes and some uniforms are sent by
-// p5.js following these naming conventions:
-// https://github.com/processing/p5.js/blob/main/contributor_docs/webgl_mode_architecture.md
-
-// 1.1. Attributes
-// vertex position attribute
 attribute vec3 aPosition;
 
-// vertex texture coordinate attribute
 attribute vec2 aTexCoord;
 
-// vertex color attribute
 attribute vec4 aVertexColor;
 
-// 1.2. Matrix uniforms
-
-// The vertex shader should project the vertex position into clip space:
-// vertex_clipspace = vertex * projection * view * model (see the gl_Position below)
-// Details here: http://visualcomputing.github.io/Transformations
-
-// Either a perspective or an orthographic projection
 uniform mat4 uProjectionMatrix;
 
-// modelview = view * model
 uniform mat4 uModelViewMatrix;
 
-// B. varying variable names are defined by the shader programmer:
-// vertex color
 varying vec4 vVertexColor;
 
-// vertex texcoord
 varying vec2 vTexCoord;
 
 void main() {
-  // copy / interpolate color
   vVertexColor = aVertexColor;
-  // copy / interpolate texcoords
   vTexCoord = aTexCoord;
-  // vertex projection into clipspace
   gl_Position = uProjectionMatrix * uModelViewMatrix * vec4(aPosition, 1.0);
 }
 ``` 
@@ -119,18 +94,12 @@ Código fragment shader:
 ``` javascript
 precision mediump float;
 
-// texture is sent by the sketch
 uniform sampler2D texture;
 
-// interpolated color (same name and type as in vertex shader)
 varying vec4 vVertexColor;
-// interpolated texcoord (same name and type as in vertex shader)
 varying vec2 vTexCoord;
 
 void main() {
-  // texture2D(texture, vTexCoord) samples texture at vTexCoord 
-  // and returns the normalized texel color
-  // texel color times vVertexColor gives the final normalized pixel color
   vec4 col = texture2D(texture, vTexCoord) * vVertexColor;
   float RGBAverage = (col.r + col.g + col.b) * 0.33;
   gl_FragColor = vec4(vec3(RGBAverage, RGBAverage, RGBAverage), 1.0);
@@ -140,11 +109,57 @@ void main() {
 Resultado:
 > :P5 sketch=/docs/sketches/hardwareRGBAverage.js, width=512, height=512
 
+Código para un video:
+
+``` javascript
+
+ let theShader;
+ let vid;
+
+ function preload(){
+    theShader = loadShader('/vc/docs/sketches/shader2.vert', '/vc/docs/sketches/videoRGBFrag.frag');
+ }
+
+ function setup() {
+   createCanvas(320, 240, WEBGL);
+   vid = createVideo(['/vc/docs/sketches/fingers.mov', '/vc/docs/sketches/fingers.webm']);
+   vid.hide();
+   vid.loop();
+   fill(0);
+ }
+
+ function draw() {
+   shader(theShader);
+   theShader.setUniform('texture', vid);
+   rect(0,0,width,height);
+ }
+```
+
+Código fragment shader:
+
+``` javascript
+precision mediump float;
+
+varying vec2 vTexCoord;
+
+uniform sampler2D texture;
+
+varying vec4 vVertexColor;
+
+
+void main() {
+  
+  vec4 tex = texture2D(texture, 1.0 - vTexCoord);
+
+  float RGBAverage = (tex.r + tex.g + tex.b) * 0.333;
+
+  gl_FragColor = vec4(vec3(RGBAverage, RGBAverage, RGBAverage), 1.0);
+}
+``` 
+
 Resultado video:
 > :P5 sketch=/docs/sketches/hardwareRGBAverageVideo.js, width=320, height=240
  
-
-FALTA APLICAR EL MÉTODO A UN VIDEO
 
 ## Conversión a escala de grises: Luma
 
@@ -191,22 +206,15 @@ Código fragment shader:
 ``` javascript
 precision mediump float;
 
-// texture is sent by the sketch
 uniform sampler2D texture;
 
-// interpolated color (same name and type as in vertex shader)
 varying vec4 vVertexColor;
-// interpolated texcoord (same name and type as in vertex shader)
 varying vec2 vTexCoord;
 
 void main() {
-  // texture2D(texture, vTexCoord) samples texture at vTexCoord 
-  // and returns the normalized texel color
-  // texel color times vVertexColor gives the final normalized pixel color
   vec4 col = texture2D(texture, vTexCoord) * vVertexColor;
   float gray = dot(col.rgb, vec3(0.299, 0.587, 0.0114));
   gl_FragColor = vec4(vec3(gray), 1.0);
-  //gl_FragColor = texture2D(texture, vTexCoord) * vVertexColor;  
 }
 ```
 
@@ -214,11 +222,58 @@ Resultado:
 
 > :P5 sketch=/docs/sketches/hardwareLUMA.js, width=512, height=512
 
+
+Código para un video:
+
+``` javascript
+
+ 
+ let theShader;
+ let vid;
+
+ function preload(){
+    theShader = loadShader('/vc/docs/sketches/shader2.vert', '/vc/docs/sketches/videoLUMAFrag.frag');
+ }
+
+ function setup() {
+   createCanvas(320, 240, WEBGL);
+   vid = createVideo(['/vc/docs/sketches/fingers.mov', '/vc/docs/sketches/fingers.webm']);
+   vid.hide();
+   vid.loop();
+   fill(0);
+ }
+
+ function draw() {
+   shader(theShader);
+   theShader.setUniform('texture', vid);
+   rect(0,0,width,height);
+ }
+```
+
+Código fragment shader:
+
+``` javascript
+precision mediump float;
+
+varying vec2 vTexCoord;
+
+uniform sampler2D texture;
+
+
+void main() {
+
+  vec4 col = texture2D(texture, 1.0 - vTexCoord);
+
+  float gray = dot(col.rgb, vec3(0.299, 0.587, 0.0114));
+  
+  gl_FragColor = vec4(vec3(gray), 1.0);
+}
+``` 
+
 Resultado video:
 > :P5 sketch=/docs/sketches/hardwareLUMAVideo.js, width=320, height=240
 
 
-FALTA APLICAR EL MÉTODO A UN VIDEO
 
 ## Fuentes
 

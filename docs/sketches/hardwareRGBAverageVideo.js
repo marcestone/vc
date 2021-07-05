@@ -3,14 +3,14 @@
  let vid;
 
  function preload(){
-    theShader = loadShader('/vc/docs/sketches/shader.vert', '/vc/docs/sketches/videoRGBFrag.frag');
+    theShader = loadShader('/vc/docs/sketches/shader2.vert', '/vc/docs/sketches/videoRGBFrag.frag');
  }
 
  function setup() {
    createCanvas(320, 240, WEBGL);
    vid = createVideo(['/vc/docs/sketches/fingers.mov', '/vc/docs/sketches/fingers.webm']);
+   vid.hide();
    vid.loop();
-   noStroke();
    fill(0);
  }
 

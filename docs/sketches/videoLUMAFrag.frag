@@ -7,7 +7,7 @@ uniform sampler2D texture;
 
 void main() {
 
-  vec4 col = texture2D(texture, vTexCoord);
+  vec4 col = texture2D(texture, 1.0 - vTexCoord);
 
   float gray = dot(col.rgb, vec3(0.299, 0.587, 0.0114));
   
