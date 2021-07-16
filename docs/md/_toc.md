@@ -39,4 +39,5 @@
 > > :Collapse label=Workshop 2
 > >
 > > [Point 1](/docs/workshops/workshop2/Punto1/grayScaleHardware)
+> > [Point 4](/docs/workshops/workshop2/Punto4/moisaicHardware)
 > > [Conclusions](/docs/workshops/workshop2/conclusiones)
