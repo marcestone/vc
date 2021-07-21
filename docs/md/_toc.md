@@ -28,7 +28,7 @@
 
 > :Collapse label=Deliveries
 > 
-> > :Collapse label=Workshop 1
+> > :Collapse label=Workshop Software
 > >
 > > [Point 1](/docs/workshops/workshop1/Punto1/grayScale)
 > > [Point 2](/docs/workshops/workshop1/Punto2/Kernel)
@@ -36,8 +36,12 @@
 > > [Point 4](/docs/workshops/workshop1/Punto4/mosaic)
 > > [Conclusions](/docs/workshops/workshop1/conclusiones)
 >
-> > :Collapse label=Workshop 2
+> > :Collapse label=Workshop Hardware 
 > >
 > > [Point 1](/docs/workshops/workshop2/Punto1/grayScaleHardware)
 > > [Point 4](/docs/workshops/workshop2/Punto4/moisaicHardware)
 > > [Conclusions](/docs/workshops/workshop2/conclusiones)
+>
+> > :Collapse label=Workshop Rendering 
+> >
+> > [Indagación teórica](/docs/workshops/workshopRendering/renderingWorkshop)
