@@ -19,7 +19,7 @@ function setup(){
     theShader.setUniform('image', img)
     theShader.setUniform('mosaicImages', mosaicImages)
     theShader.setUniform('indexImages', indexImages)
-    theShader.setUniform('resolution', 200)
+    theShader.setUniform('resolution', 20)
 
     background(0);
     beginShape();

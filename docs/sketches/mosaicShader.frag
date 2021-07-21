@@ -75,7 +75,7 @@ int getClosestColor(vec4 indexColor){
 
   for (int i = 0; i < 276; i++) {
     vec4 color = texture2D(indexImages, vec2(float(i) + 0.5) / vec2(1.0, 276.0));
-    vec3 colorLab = rgb2lab(vec3(color.r, color.g, color.g));
+    vec3 colorLab = rgb2lab(vec3(color.r, color.g, color.b));
     float diff = distance(indexColorLab, colorLab);
     if(diff <= minDiff) {
       minDiff = diff;
