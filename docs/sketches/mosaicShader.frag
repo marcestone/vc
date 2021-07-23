@@ -1,14 +1,10 @@
 precision highp float;
 
-// texture is sent by the sketch
 uniform sampler2D image;
 uniform sampler2D mosaicImages;
 uniform sampler2D indexImages;
 uniform float resolution;
 
-// interpolated color (same name and type as in vertex shader)
-// varying vec4 vVertexColor;
-// interpolated texcoord (same name and type as in vertex shader)
 varying vec2 vTexCoord;
 
 vec3 rgb2xyz( vec3 c ) {
@@ -73,8 +69,8 @@ int getClosestColor(vec4 indexColor){
 
   vec3 indexColorLab = rgb2lab(vec3(indexColor.r, indexColor.g, indexColor.b));
 
-  for (int i = 0; i < 276; i++) {
-    vec4 color = texture2D(indexImages, vec2(float(i) + 0.5) / vec2(1.0, 276.0));
+  for (int i = 0; i < 277; i++) {
+    vec4 color = texture2D(indexImages, vec2(float(i) + 0.5) / vec2(1.0, 277.0));
     vec3 colorLab = rgb2lab(vec3(color.r, color.g, color.b));
     float diff = distance(indexColorLab, colorLab);
     if(diff <= minDiff) {
@@ -92,7 +88,7 @@ void main() {
   vec2 symbolCoord = vTexCoord * resolution;
   vec2 imageCoord = floor(symbolCoord);
 
-  symbolCoord = (symbolCoord - imageCoord) / vec2(1.0, 276.0);
+  symbolCoord = (symbolCoord - imageCoord) / vec2(1.0, 277.0);
 
   imageCoord = imageCoord / vec2(resolution);
 
@@ -100,9 +96,8 @@ void main() {
 
   int closest = getClosestColor(indexColor);
 
-  float imageHeight = (float(closest)) / 276.0;
+  float imageHeight = (float(closest)) / 277.0;
 
-  // gl_FragColor = closest;
   gl_FragColor = texture2D(mosaicImages, symbolCoord + vec2(0.0, imageHeight));
 }
 
