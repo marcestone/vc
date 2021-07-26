@@ -39,6 +39,7 @@
 > > :Collapse label=Workshop Hardware 
 > >
 > > [Point 1](/docs/workshops/workshop2/Punto1/grayScaleHardware)
+> > [Point 3](/docs/workshops/workshop2/Punto3/ascii_hardware)
 > > [Conclusions](/docs/workshops/workshop2/conclusiones)
 >
 > > :Collapse label=Workshop Rendering 
