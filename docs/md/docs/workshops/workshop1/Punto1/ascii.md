@@ -68,9 +68,6 @@ Resultado:
 > :P5 sketch=/docs/sketches/Workshop1/ASCII/sol.js, width=400, height=700
 
 
-# Conclusiones
-
-Esta tecnica de conversion se basa en la creacion de una matriz de pesos la cual asigna a cada pixel en pantalla un caracter ASCII, teniendo en cuenta los pixeles adyacentes al momento de hacerlo. 
 
 ## Fuentes
 
