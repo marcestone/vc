@@ -39,6 +39,7 @@
 > > :Collapse label=Workshop Hardware 
 > >
 > > [Point 1](/docs/workshops/workshop2/Punto1/grayScaleHardware)
+> > [Point 4](/docs/workshops/workshop2/Punto4/moisaicHardware)
 > > [Conclusions](/docs/workshops/workshop2/conclusiones)
 >
 > > :Collapse label=Workshop Rendering 
