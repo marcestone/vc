@@ -1,5 +1,5 @@
 const w = 500;
-const h = 400;
+const h = 500;
 var img, imgShader;
 let n = 0;
 let shaderSelect;
