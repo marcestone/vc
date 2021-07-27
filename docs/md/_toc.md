@@ -42,7 +42,6 @@
 > > [Point 2](/docs/workshops/workshop2/Punto2/kernelHardware)
 > > [Point 3](/docs/workshops/workshop2/Punto3/ascii_hardware)
 > > [Point 4](/docs/workshops/workshop2/Punto4/moisaicHardware)
->
 > > [Conclusions](/docs/workshops/workshop2/conclusiones)
 >
 > > :Collapse label=Workshop Rendering 
