@@ -15,7 +15,7 @@ var matrixs = [idn, blur, sharp, edges1, edges2, edges3]
 
 function preload() {
     img = loadImage('/vc/docs/sketches/cuy.jpg')
-    imgShader = loadShader('/vc/docs/sketches/shader.vert', '/vc/docs/sketches/kernelsader.frag');
+    imgShader = loadShader('/vc/docs/sketches/shader.vert', '/vc/docs/sketches/kernelshader.frag');
 }
 
 
