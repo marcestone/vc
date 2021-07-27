@@ -305,3 +305,5 @@ La segunda parte del proceso se hace en tiempo real, se cargan la imagen diccion
 * https://en.wikipedia.org/wiki/CIELAB_color_space
 
 * https://web.archive.org/web/20070928151739/http://www.hunterlab.com/appnotes/an02_01.pdf
+
+* https://gist.github.com/mattatz/44f081cac87e2f7c8980
