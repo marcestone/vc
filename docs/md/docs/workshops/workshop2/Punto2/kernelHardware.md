@@ -39,7 +39,7 @@ void main() {
 ```
 
 ## Convolution video
-> :P5 sketch=/docs/sketches/kernelHWvideo.js, width=312, height=312
+> :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/kernelHWvideo.js, width=312, height=312
 
 ## Fuentes
 
