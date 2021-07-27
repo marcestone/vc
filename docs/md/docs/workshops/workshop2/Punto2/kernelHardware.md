@@ -4,7 +4,7 @@ El proceso de shaders se puede extender a operaciones con filtros de convulsión
 
 La matriz de convolucion se pasa como un parametro en una variable uniforme en conjunto con la imagen y las coordenandas de la textura, de esta manera logramos colocar diferentes mascaras de convolucion al pasar otra matriz como parametro dentro de script en javasript.
 
-> :P5 sketch=/docs/sketches/kernelHW.js, width=500, height=400
+> :P5 sketch=/docs/sketches/kernelHW.js, width=500, height=500
 
 En el archivo frag tomamos la matriz de convolucion y se la aplicamos a la matriz de texeles adyacentes para generar la modificacion de la textura.
 
