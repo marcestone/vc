@@ -18,8 +18,8 @@ var mask = [
 function preload() {
     vid = createVideo("/vc/docs/sketches/pacman.mp4");
     vid.hide();
-    imgShader = [
-        loadShader('/vc/docs/sketches/shader.vert', '/vc/docs/sketches/kernelshader.frag');
+        imgShader = [
+        loadShader('/vc/docs/sketches/shader.vert', '/vc/docs/sketches/kernelshader.frag')
     ]
 }
 
