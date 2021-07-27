@@ -14,7 +14,7 @@ var edges2 = [-1.0, -1.0, -1.0, -1.0, 8.0, -1.0, -1.0, -1.0, -1.0];
 var matrixs = [idn, blur, sharp, edges1, edges2, edges3]
 
 function preload() {
-    img = loadImage('/vc/docs/sketches/ocapi.jpg')
+    img = loadImage('/vc/docs/sketches/lenna.png')
     imgShader = loadShader('/vc/docs/sketches/shader.vert', '/vc/docs/sketches/kernelshader.frag');
 }
 
