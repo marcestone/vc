@@ -38,6 +38,9 @@ void main() {
 }
 ```
 
+## Convolution video
+> :P5 sketch=/docs/sketches/kernelHWvideo.js, width=312, height=312
+
 ## Fuentes
 
 - https://en.wikipedia.org/wiki/Kernel_(image_processing)
